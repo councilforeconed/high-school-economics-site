@@ -143,7 +143,7 @@ section {
 
 @media (min-width: 768px) {
   #about p {
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
   #about img {
     height: 300px;
     float: left;
@@ -152,7 +152,7 @@ section {
     font-size: 24px; } }
 @media (min-width: 1024px) {
   #about p {
-    font-size: 1.6rem; } }
+    font-size: 1.5rem; } }
 #about .pricing {
   clear: both;
   text-align: center; }
@@ -245,14 +245,14 @@ footer {
 
 h2 {
   font-weight: 400;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   margin: 0 0 1em 0; }
   @media (min-width: 540px) {
     h2 {
-      font-size: 1.5em; } }
+      font-size: 1.5rem; } }
   @media (min-width: 768px) {
     h2 {
-      font-size: 1.8em; } }
+      font-size: 1.8rem; } }
 
 p {
   line-height: 1.4em;
@@ -298,7 +298,7 @@ a.button {
   margin-bottom: 0.5rem; }
   @media (min-width: 768px) {
     .contributor-list .contributor h3.contributor-name {
-      font-size: 1.5em; } }
+      font-size: 1.5rem; } }
   .contributor-list .contributor h3.contributor-name a {
     color: #cd3a33;
     text-decoration: none; }
