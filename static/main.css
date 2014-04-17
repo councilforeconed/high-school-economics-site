@@ -46,89 +46,226 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-img {
-  max-width: 100%;
-  margin: 0 auto 1rem auto; }
-
-.image {
-  width: 100%;
-  min-height: 50px;
-  background-color: #DDD;
-  margin: 0 auto 1rem auto;
-  background-repeat: no-repeat; }
-
-#cee-logo {
-  background-image: url(../images/logo.jpg);
-  background-size: contain;
-  width: 171px;
-  height: 65px; }
-
-#book-cover {
-  width: 288px;
-  height: 372px; }
-
-#interactive-screenshot {
-  width: 288px;
-  height: 216px; }
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: #333333; }
+  @media (min-width: 540px) {
+    body {
+      font-size: 1.2em; } }
+  @media (min-width: 1024px) {
+    body {
+      margin-top: 65px;
+      font-size: 1.5em; } }
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1.2em; } }
 
 header {
   background-color: #80b442;
   color: white;
   padding: 1.5rem 1rem; }
+  @media (min-width: 540px) {
+    header {
+      padding: 1.5rem 2rem; } }
+  @media (min-width: 768px) {
+    header {
+      padding: 5rem 3rem; } }
   header h1 {
     font-weight: 400;
     font-size: 1.5em;
     line-height: 1.2em;
     margin-bottom: 0.5em; }
+    @media (min-width: 540px) {
+      header h1 {
+        font-size: 2em; } }
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 2.5em; } }
 
 .logo {
   margin: 1rem 0;
   position: static;
   top: 0;
   left: 0;
-  width: 100%;
-  max-height: 65px; }
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .logo {
+      position: fixed;
+      height: 65px;
+      background-color: white;
+      margin: 0; } }
+  .logo img {
+    display: block;
+    height: 65px; }
+    @media (min-width: 1024px) {
+      .logo img {
+        display: inline; } }
 
 nav {
-  display: none; }
+  position: fixed;
+  top: 0;
+  right: 1em;
+  min-width: 850px;
+  height: 65px;
+  font-size: 1rem; }
+  @media (max-width: 1023px) {
+    nav {
+      display: none; } }
+  nav .navigation-links {
+    position: relative;
+    height: 65px;
+    margin-bottom: 1em; }
+  nav ul {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    text-align: right; }
+    nav ul li {
+      display: inline;
+      margin-right: 1em; }
+      nav ul li:last-of-type {
+        margin-right: 0; }
+      nav ul li a {
+        color: #333333;
+        font-weight: 400; }
+        nav ul li a:hover {
+          color: #5cc1d5; }
 
 section {
   padding: 1.5rem 1rem; }
+  @media (min-width: 540px) {
+    section {
+      padding: 1.5rem 2rem; } }
+  @media (min-width: 768px) {
+    section {
+      padding: 5rem 3rem; } }
+
+@media (min-width: 768px) {
+  #about p {
+    font-size: 1.2rem; }
+  #about img {
+    height: 300px;
+    float: left;
+    margin: 0 1em 1em 0; }
+  #about .pricing .book p {
+    font-size: 24px; } }
+@media (min-width: 1024px) {
+  #about p {
+    font-size: 1.6rem; } }
+#about .pricing {
+  clear: both;
+  text-align: center; }
+  #about .pricing .book {
+    display: inline-block;
+    margin-right: 1em; }
 
 #table-of-contents {
   background-color: #5cc1d5;
   color: white; }
+  @media (min-width: 1024px) {
+    #table-of-contents .contents {
+      -moz-column-count: 2;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px; } }
   #table-of-contents ol.lessons {
-    list-style: decimal; }
-    #table-of-contents ol.lessons li {
-      display: inline-block;
-      margin-right: 0.5rem;
-      line-height: 1.3em; }
+    list-style: decimal;
+    font-size: 0.8em;
+    margin-left: 1.5em;
+    line-height: 1.5em; }
+    @media (min-width: 540px) {
+      #table-of-contents ol.lessons {
+        font-size: 1em;
+        margin-left: 2.3em; } }
 
 #sample-lesson {
   background-color: #fbd645; }
+  @media (min-width: 768px) {
+    #sample-lesson img {
+      height: 300px;
+      float: right;
+      margin: 0 0 1em 1em; } }
+  @media (min-width: 800px) {
+    #sample-lesson {
+      font-size: 1.5em; } }
+  #sample-lesson .resources {
+    clear: both;
+    text-align: center; }
+    #sample-lesson .resources a {
+      display: inline-block;
+      background-color: #facb13;
+      margin: 10px auto;
+      padding: 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: white; }
+      @media (min-width: 540px) {
+        #sample-lesson .resources a {
+          min-width: 150px;
+          font-size: 1.3em; } }
+      @media (min-width: 768px) {
+        #sample-lesson .resources a {
+          min-width: 200px; } }
+      #sample-lesson .resources a:hover {
+        background-color: #d5ab05; }
 
 #bibliographic-information {
   background-color: #80b442;
   color: white; }
+  #bibliographic-information dt {
+    font-weight: 400;
+    display: inline; }
+  #bibliographic-information dd {
+    margin-bottom: 1em; }
+  @media (min-width: 800px) {
+    #bibliographic-information .information {
+      -moz-column-count: 2;
+      -moz-column-gap: 20px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+      column-count: 2;
+      column-gap: 20px; } }
 
 footer {
   background-color: #eae9d7;
-  min-height: 200px; }
+  padding: 1.5rem 1rem; }
+  @media (min-width: 540px) {
+    footer {
+      padding: 1.5rem 2rem; } }
+  @media (min-width: 768px) {
+    footer {
+      padding: 5rem 3rem; } }
+  footer ul {
+    line-height: 2em; }
+  footer a {
+    color: #a19d54; }
 
 h2 {
   font-weight: 400;
   font-size: 1.25em;
   margin: 0 0 1em 0; }
+  @media (min-width: 540px) {
+    h2 {
+      font-size: 1.5em; } }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.8em; } }
 
 p {
   line-height: 1.4em;
   margin-bottom: 1.4em; }
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 1rem auto; }
+
+a {
+  color: #5cc1d5;
+  text-decoration: none; }
 
 a.button {
   display: block;
@@ -138,6 +275,15 @@ a.button {
   text-align: center;
   text-decoration: none;
   color: white; }
+  @media (min-width: 540px) {
+    a.button {
+      font-size: 1.5em; } }
+  a.button:hover {
+    background-color: #4b6927; }
+
+.section-content {
+  max-width: 800px;
+  margin: auto; }
 
 .pricing h3 {
   display: inline-block;
@@ -147,11 +293,14 @@ a.button {
 .pricing p {
   display: inline-block; }
 
-.contributor h3.contributor-name {
+.contributor-list .contributor h3.contributor-name {
   font-weight: 400;
   margin-bottom: 0.5rem; }
-  .contributor h3.contributor-name a {
+  @media (min-width: 768px) {
+    .contributor-list .contributor h3.contributor-name {
+      font-size: 1.5em; } }
+  .contributor-list .contributor h3.contributor-name a {
     color: #cd3a33;
     text-decoration: none; }
-.contributor .biography {
+.contributor-list .contributor .biography {
   display: none; }

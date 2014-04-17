@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300,600);
 
 @import "reset";
-@import "images";
 
 $red: rgba(205, 58, 51, 1);
 $green: rgba(128, 180, 66, 1);
@@ -10,21 +9,70 @@ $yellow: rgba(251, 214, 69, 1);
 $beige: rgba(234, 233, 215, 1);
 $black: rgba(51, 51, 51, 1);
 
+$topbar-height: 65px;
+
+@mixin side-padding {
+  padding: 1.5rem 1rem;
+  @media (min-width:540px) {
+    padding: 1.5rem 2rem;
+  }
+  @media (min-width:768px) {
+    padding: 5rem 3rem;
+  }
+}
+
+@mixin float-image-left {
+  height: 300px;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+@mixin columns($number) {
+  -moz-column-count: $number;
+  -moz-column-gap: 20px;
+  -webkit-column-count: $number;
+  -webkit-column-gap: 20px;
+  column-count: $number;
+  column-gap: 20px;
+}
+
+@mixin float-image-right {
+  height: 300px;
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   color: $black;
+  @media (min-width:540px) {
+    font-size: 1.2em;
+  }
+  @media (min-width:1024px) {
+    margin-top: $topbar-height;
+    font-size: 1.5em;
+  }
+  @media (min-width:1024px) {
+    font-size: 1.2em;
+  }
 }
 
 header {
   background-color: $green;
   color: white;
-  padding: 1.5rem 1rem;
+  @include side-padding;
   h1 {
     font-weight: 400;
     font-size: 1.5em;
     line-height: 1.2em;
     margin-bottom: 0.5em;
+    @media (min-width:540px) {
+      font-size: 2em;
+    }
+    @media (min-width:768px) {
+      font-size: 2.5em;
+    }
   }
 }
 
@@ -34,53 +82,198 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 65px;
+  @media (min-width:1024px) {
+    position: fixed;
+    height: $topbar-height;
+    background-color: white;
+    margin: 0;
+  }
+  img {
+    display: block;
+    height: $topbar-height;
+    @media (min-width:1024px) {
+      display: inline;
+    }
+  }
 }
 
 nav {
-  display: none;
+  position: fixed;
+  top: 0;
+  right: 1em;
+  min-width: 850px;
+  height: $topbar-height;
+  font-size: 1rem;
+  @media (max-width:1023px) {
+    display: none;
+  }
+  .navigation-links {
+    position: relative;
+    height: $topbar-height;
+    margin-bottom: 1em;
+  }
+  ul {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    text-align: right;
+    li {
+      display: inline;
+      margin-right: 1em;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        color: $black;
+        font-weight: 400;
+        &:hover {
+          color: $blue;
+        }
+      }
+    }
+  }
 }
 
 section {
-  padding: 1.5rem 1rem;
+  @include side-padding;
+}
+
+#about {
+  @media (min-width:768px) {
+    p {
+      font-size: 1.2rem;
+    }
+    img {
+      @include float-image-left;
+    }
+    .pricing .book p {
+      font-size: 24px;
+    }
+  }
+  @media (min-width:1024px) {
+    p {
+      font-size: 1.6rem;
+    }
+  }
+  .pricing {
+    clear: both;
+    text-align: center;
+    .book {
+      display: inline-block;
+      margin-right: 1em;
+    }
+  }
 }
 
 #table-of-contents {
   background-color: $blue;
   color: white;
+  .contents {
+    @media (min-width:1024px) {
+      @include columns(2);
+    }
+  }
   ol.lessons {
     list-style: decimal;
-    li {
-      display: inline-block;
-      margin-right: 0.5rem;
-      line-height: 1.3em;
+    font-size: 0.8em;
+    margin-left: 1.5em;
+    line-height: 1.5em;
+    @media (min-width:540px) {
+      font-size: 1em;
+      margin-left: 2.3em;
     }
   }
 }
 
 #sample-lesson {
   background-color: $yellow;
+  @media (min-width:768px) {
+    img {
+      @include float-image-right;
+    }
+  }
+  @media (min-width:800px) {
+    font-size: 1.5em;
+  }
+  .resources {
+    clear: both;
+    text-align: center;
+    a {
+      display: inline-block;
+      background-color: darken($yellow, 10%);
+      margin: 10px auto;
+      padding: 1rem;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      @media (min-width:540px) {
+        min-width: 150px;
+        font-size: 1.3em;
+      }
+      @media (min-width:768px) {
+        min-width: 200px;
+      }
+      &:hover {
+        background-color: darken($yellow, 20%);
+      }
+    }
+  }
 }
 
 #bibliographic-information {
   background-color: $green;
   color: white;
+  dt {
+    font-weight: 400;
+    display: inline;
+  }
+  dd {
+    margin-bottom: 1em;
+  }
+  @media (min-width:800px) {
+    .information {
+      @include columns(2);
+    }
+  }
 }
 
 footer {
   background-color: $beige;
-  min-height: 200px;
+  @include side-padding;
+  ul {
+    line-height: 2em;
+  }
+  a {
+    color: darken($beige, 40%);
+  }
 }
 
 h2 {
   font-weight: 400;
   font-size: 1.25em;
   margin: 0 0 1em 0;
+  @media (min-width:540px) {
+    font-size: 1.5em;
+  }
+  @media (min-width:768px) {
+    font-size: 1.8em;
+  }
 }
 
 p {
   line-height: 1.4em;
   margin-bottom: 1.4em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 1rem auto;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
 }
 
 a.button {
@@ -91,6 +284,17 @@ a.button {
   text-align: center;
   text-decoration: none;
   color: white;
+  @media (min-width:540px) {
+    font-size: 1.5em;
+  }
+  &:hover {
+    background-color: darken($green, 20%);
+  }
+}
+
+.section-content {
+  max-width: 800px;
+  margin: auto;
 }
 
 .pricing {
@@ -106,16 +310,21 @@ a.button {
   }
 }
 
-.contributor {
-  h3.contributor-name {
-    font-weight: 400;
-    margin-bottom: 0.5rem;
-    a {
-      color: $red;
-      text-decoration: none;
+.contributor-list {
+  .contributor {
+    h3.contributor-name {
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      @media (min-width:768px) {
+        font-size: 1.5em;
+      }
+      a {
+        color: $red;
+        text-decoration: none;
+      }
     }
-  }
-  .biography {
-    display: none;
+    .biography {
+      display: none;
+    }
   }
 }
