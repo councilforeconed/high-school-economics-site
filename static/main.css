@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,700,300,600);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  margin: 0 auto 1rem auto; }
+
+.image {
+  width: 100%;
+  min-height: 50px;
+  background-color: #DDD;
+  margin: 0 auto 1rem auto;
+  background-repeat: no-repeat; }
+
+#cee-logo {
+  background-image: url(../images/logo.jpg);
+  background-size: contain;
+  width: 171px;
+  height: 65px; }
+
+#book-cover {
+  width: 288px;
+  height: 372px; }
+
+#interactive-screenshot {
+  width: 288px;
+  height: 216px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  color: #333333; }
+
+header {
+  background-color: #80b442;
+  color: white;
+  padding: 1.5rem 1rem; }
+  header h1 {
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-bottom: 0.5em; }
+
+.logo {
+  margin: 1rem 0;
+  position: static;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 65px; }
+
+nav {
+  display: none; }
+
+section {
+  padding: 1.5rem 1rem; }
+
+#table-of-contents {
+  background-color: #5cc1d5;
+  color: white; }
+  #table-of-contents ol.lessons {
+    list-style: decimal; }
+    #table-of-contents ol.lessons li {
+      display: inline-block;
+      margin-right: 0.5rem;
+      line-height: 1.3em; }
+
+#sample-lesson {
+  background-color: #fbd645; }
+
+#bibliographic-information {
+  background-color: #80b442;
+  color: white; }
+
+footer {
+  background-color: #eae9d7;
+  min-height: 200px; }
+
+h2 {
+  font-weight: 400;
+  font-size: 1.25em;
+  margin: 0 0 1em 0; }
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 1.4em; }
+
+a.button {
+  display: block;
+  background-color: #658f34;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white; }
+
+.pricing h3 {
+  display: inline-block;
+  font-weight: 400; }
+  .pricing h3:after {
+    content: ": "; }
+.pricing p {
+  display: inline-block; }
+
+.contributor h3.contributor-name {
+  font-weight: 400;
+  margin-bottom: 0.5rem; }
+  .contributor h3.contributor-name a {
+    color: #cd3a33;
+    text-decoration: none; }
+.contributor .biography {
+  display: none; }

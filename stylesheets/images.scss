@@ -1,0 +1,29 @@
+img {
+  max-width: 100%;
+  margin: 0 auto 1rem auto;
+}
+
+.image {
+  width: 100%;
+  min-height: 50px;
+  background-color: #DDD;
+  margin: 0 auto 1rem auto;
+  background-repeat: no-repeat;
+}
+
+#cee-logo {
+  background-image: url(../images/logo.jpg);
+  background-size: contain;
+  width: 171px;
+  height: 65px;
+}
+
+#book-cover {
+  width: 288px;
+  height: 372px;
+}
+
+#interactive-screenshot {
+  width: 288px;
+  height: 216px;
+}
