@@ -323,8 +323,23 @@ a.button {
         text-decoration: none;
       }
     }
+    img {
+      display: none;
+      margin: 0 1rem 0 0;
+      float: left;
+      max-height: 150px;
+    }
     .biography {
       display: none;
+    }
+    &:before,
+    &:after {
+        content: " "; /* 1 */
+        display: table; /* 2 */
+    }
+
+    &:after {
+        clear: both;
     }
   }
 }

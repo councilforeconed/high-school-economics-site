@@ -302,5 +302,17 @@ a.button {
   .contributor-list .contributor h3.contributor-name a {
     color: #cd3a33;
     text-decoration: none; }
+.contributor-list .contributor img {
+  display: none;
+  margin: 0 1rem 0 0;
+  float: left;
+  max-height: 150px; }
 .contributor-list .contributor .biography {
   display: none; }
+.contributor-list .contributor:before, .contributor-list .contributor:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.contributor-list .contributor:after {
+  clear: both; }
