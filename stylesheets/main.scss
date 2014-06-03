@@ -228,7 +228,7 @@ section {
     display: inline;
   }
   dd {
-    margin-bottom: 1em;
+    margin: 0.5em 0;
   }
   @media (min-width:800px) {
     .information {
@@ -252,6 +252,9 @@ h2 {
   font-weight: 400;
   font-size: 1.25rem;
   margin: 0 0 1em 0;
+  .subheading {
+    font-weight: 300;
+  }
   @media (min-width:540px) {
     font-size: 1.5rem;
   }
@@ -310,11 +313,15 @@ a.button {
   }
 }
 
+dt {
+  padding-bottom: 1.5rem;
+}
+
 .contributor-list {
   .contributor {
     h3.contributor-name {
       font-weight: 400;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       @media (min-width:768px) {
         font-size: 1.5rem;
       }
