@@ -223,7 +223,7 @@ section {
     font-weight: 400;
     display: inline; }
   #bibliographic-information dd {
-    margin-bottom: 1em; }
+    margin: 0.5em 0; }
   @media (min-width: 800px) {
     #bibliographic-information .information {
       -moz-column-count: 2;
@@ -251,6 +251,8 @@ h2 {
   font-weight: 400;
   font-size: 1.25rem;
   margin: 0 0 1em 0; }
+  h2 .subheading {
+    font-weight: 300; }
   @media (min-width: 540px) {
     h2 {
       font-size: 1.5rem; } }
@@ -297,12 +299,17 @@ a.button {
 .pricing p {
   display: inline-block; }
 
+<<<<<<< HEAD
 .contributor-heading {
   margin-top: 1.5em; }
+=======
+dt {
+  padding-bottom: 1.5rem; }
+>>>>>>> ad16b55d234971646fcb14323d812a5d239b5b7d
 
 .contributor-list .contributor h3.contributor-name {
   font-weight: 400;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.75rem; }
   @media (min-width: 768px) {
     .contributor-list .contributor h3.contributor-name {
       font-size: 1.5rem; } }
