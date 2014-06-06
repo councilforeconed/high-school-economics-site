@@ -64,6 +64,7 @@ body {
 header {
   background-color: #80b442;
   color: white;
+  text-align: center;
   padding: 1.5rem 1rem; }
   @media (min-width: 540px) {
     header {
@@ -159,6 +160,9 @@ section {
   #about .pricing .book {
     display: inline-block;
     margin-right: 1em; }
+#about ul {
+  list-style: disc;
+  line-height: 1em; }
 
 #table-of-contents {
   background-color: #5cc1d5;
@@ -292,6 +296,9 @@ a.button {
     content: ": "; }
 .pricing p {
   display: inline-block; }
+
+.contributor-heading {
+  margin-top: 1.5em; }
 
 .contributor-list .contributor h3.contributor-name {
   font-weight: 400;

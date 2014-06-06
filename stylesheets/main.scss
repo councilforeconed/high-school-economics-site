@@ -61,6 +61,7 @@ body {
 header {
   background-color: $green;
   color: white;
+  text-align: center;
   @include side-padding;
   h1 {
     font-weight: 400;
@@ -162,6 +163,10 @@ section {
       display: inline-block;
       margin-right: 1em;
     }
+  }
+  ul {
+      list-style: disc;
+      line-height: 1em;
   }
 }
 
@@ -308,6 +313,10 @@ a.button {
   p {
     display: inline-block;
   }
+}
+
+.contributor-heading {
+    margin-top: 1.5em;
 }
 
 .contributor-list {
