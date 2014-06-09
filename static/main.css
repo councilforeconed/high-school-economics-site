@@ -84,6 +84,13 @@ header {
       header h1 {
         font-size: 2.5em; } }
 
+#about ul {
+  margin-bottom: 2em; }
+
+#about li {
+  line-height: 2em;
+  clear: both; }
+
 .logo {
   margin: 1rem 0;
   position: static;
@@ -224,14 +231,6 @@ section {
     display: inline; }
   #bibliographic-information dd {
     margin: 0.5em 0; }
-  @media (min-width: 800px) {
-    #bibliographic-information .information {
-      -moz-column-count: 2;
-      -moz-column-gap: 20px;
-      -webkit-column-count: 2;
-      -webkit-column-gap: 20px;
-      column-count: 2;
-      column-gap: 20px; } }
 
 footer {
   background-color: #eae9d7;
@@ -299,13 +298,8 @@ a.button {
 .pricing p {
   display: inline-block; }
 
-<<<<<<< HEAD
 .contributor-heading {
   margin-top: 1.5em; }
-=======
-dt {
-  padding-bottom: 1.5rem; }
->>>>>>> ad16b55d234971646fcb14323d812a5d239b5b7d
 
 .contributor-list .contributor h3.contributor-name {
   font-weight: 400;
@@ -325,8 +319,6 @@ dt {
   display: none; }
 .contributor-list .contributor:before, .contributor-list .contributor:after {
   content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */ }
+  display: table; }
 .contributor-list .contributor:after {
   clear: both; }
