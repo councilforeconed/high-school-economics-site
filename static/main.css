@@ -222,6 +222,8 @@ section {
           min-width: 200px; } }
       #sample-lesson .resources a:hover {
         background-color: #d5ab05; }
+  #sample-lesson .title {
+    font-weight: 300; }
 
 #bibliographic-information {
   background-color: #80b442;
