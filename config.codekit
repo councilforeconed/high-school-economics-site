@@ -160,12 +160,12 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 74159,
+		"initialSize": 364048,
 		"inputAbbreviatedPath": "\/images\/interactives.png",
 		"outputAbbreviatedPath": "\/images\/interactives.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/images\/logo.jpg": {
 		"fileType": 16384,
