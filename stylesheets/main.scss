@@ -345,8 +345,15 @@ a.button {
   }
 }
 
-.contributor-heading {
-    margin-top: 1.5em;
+#demonstration-videos {
+  background-color: $green;
+  color: white;
+  h3 {
+    margin: 1em 0;
+  }
+  iframe {
+    margin-bottom: 1em;
+  }
 }
 
 .contributor-list {
